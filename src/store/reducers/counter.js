@@ -1,10 +1,11 @@
-import * as actionTypes from "../actions";
+import * as actionTypes from "../actions/actions";
 
 const initialState = {
   counter: 0
 };
 
 const reducer = (state = initialState, action) => {
+  console.log("REDUCER", action);
   switch (action.type) {
     case actionTypes.INCREMENT:
       return { ...state, counter: state.counter + 1 };
