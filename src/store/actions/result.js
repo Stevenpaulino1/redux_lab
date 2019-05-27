@@ -7,9 +7,11 @@ export const saveResult = res => {
   };
 };
 export const storeResult = res => {
-  return dispatch => {
+  // const updatedResult = res * 2;
+  return (dispatch, getState) => {
     //simulating async code
     setTimeout(() => {
+      // const oldCounter = getState().counter.ctr.counter ;
       dispatch(saveResult(res));
     }, 2000);
   };
